@@ -1,3 +1,12 @@
+variable "region" {
+  description = "AWS region"
+}
+
+variable "multi-az" {
+  description = "Deploy to 3 availability zones for HA"
+  type = bool
+}
+
 variable "db_name" {
   description = "Unique name to assign to RDS instance"
 }
