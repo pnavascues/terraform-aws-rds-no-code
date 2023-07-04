@@ -1,5 +1,11 @@
 provider "aws" {
-  region = "us-east-2"
+  region = var.region
+
+  default_tags {
+    tags = {
+      HA    = var.multi-az
+    }
+  }
 }
 
 data "aws_availability_zones" "available" {}
